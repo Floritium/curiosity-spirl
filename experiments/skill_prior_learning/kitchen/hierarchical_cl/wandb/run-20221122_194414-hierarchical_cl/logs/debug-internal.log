@@ -1,0 +1,277 @@
+2022-11-22 19:44:14,846 INFO    StreamThr :30522 [internal.py:wandb_internal():88] W&B internal server running at pid: 30522, started at: 2022-11-22 19:44:14.845438
+2022-11-22 19:44:14,849 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: status
+2022-11-22 19:44:14,849 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: status
+2022-11-22 19:44:14,854 INFO    WriterThread:30522 [datastore.py:open_for_write():75] open: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/run-hierarchical_cl.wandb
+2022-11-22 19:44:14,854 DEBUG   SenderThread:30522 [sender.py:send():303] send: header
+2022-11-22 19:44:14,862 DEBUG   SenderThread:30522 [sender.py:send():303] send: run
+2022-11-22 19:44:14,867 INFO    SenderThread:30522 [sender.py:_maybe_setup_resume():593] checking resume status for haukebue/Hauke Bachelor Thesis/hierarchical_cl
+2022-11-22 19:44:15,134 INFO    SenderThread:30522 [sender.py:_maybe_setup_resume():656] configured resuming with: ResumeState(resumed=True,step=479516,history=1078,events=5095,output=4582,runtime=154038.945861,wandb_runtime=154033,summary={'val/q_hat_loss_loss': 13.200873374938965, 'train/q_hat_loss_breakdown': {'width': 400, 'count': 1, 'filenames': ['media/images/train/q_hat_loss_breakdown_479515_3a64c9c75666cb5433e2.png'], 'format': 'png', 'height': 400, '_type': 'images/separated'}, '_wandb': {'runtime': 154033}, 'train/kl_loss_loss': 1.3576900959014893, 'train/beta': 0.0005, 'train/gradients/mean_norm': 0.5400564074516296, 'eval/results/metric/mse/top100_mean': 0.008474078191284207, 'eval/results/verbose/mse/all100_mean': 0.05278669697356236, 'eval/results/verbose/mse/all100_std': 0.04369584269174679, 'eval/results/verbose/mse/top100_std': 0.01020895223743516, 'val/kl_loss_loss': 1.3332467079162598, 'train/q_hat_loss_loss': 10.497802734375, '_timestamp': 1669066398.506591, 'train/gradients/max_norm': 4.218214988708496, '_runtime': 153696.5649213791, '_step': 479515, 'val/rec_mse_loss': 0.9213343262672424, 'train/total_loss': 11.419316291809082, 'train/rec_mse_loss': 0.9208346605300904, 'val/q_hat_loss_breakdown': {'_type': 'images/separated', 'filenames': ['media/images/val/q_hat_loss_breakdown_479511_1ad77c0bee06af107e3a.png'], 'format': 'png', 'height': 400, 'width': 400, 'count': 1}},config={'_wandb': {'desc': None, 'value': {'t': {'1': [1, 41, 55], '2': [1, 41, 55], '3': [5, 16, 23], '4': '3.8.15', '5': '0.13.5', '8': [5]}, 'framework': 'torch', 'start_time': 1669055671.481947, 'cli_version': '0.13.5', 'is_jupyter_run': False, 'python_version': '3.8.15', 'is_kaggle_kernel': False}}, 'exp_dir': {'desc': None, 'value': './experiments'}, 'ckpt_path': {'desc': None, 'value': None}, 'conf_path': {'desc': None, 'value': 'spirl/configs/skill_prior_learning/kitchen/hierarchical_cl/conf.py'}, 'model_res': {'desc': None, 'value': 128}, 'data_device': {'desc': None, 'value': 'cpu'}, 'model_device': {'desc': None, 'value': 'cpu'}, 'model_nz_enc': {'desc': None, 'value': 128}, 'model_nz_mid': {'desc': None, 'value': 128}, 'model_env_name': {'desc': None, 'value': 'kitchen-mixed-v0'}, 'model_n_actions': {'desc': None, 'value': 9}, 'model_state_dim': {'desc': None, 'value': 60}, 'general_data_dir': {'desc': None, 'value': '.'}, 'model_action_dim': {'desc': None, 'value': 9}, 'model_batch_size': {'desc': None, 'value': 128}, 'model_subseq_len': {'desc': None, 'value': 11}, 'model_cond_decode': {'desc': None, 'value': True}, 'model_max_seq_len': {'desc': None, 'value': 280}, 'general_num_epochs': {'desc': None, 'value': 100}, 'model_kl_div_weight': {'desc': None, 'value': 0.0005}, 'data_dataset_spec_res': {'desc': None, 'value': 128}, 'general_top_of_n_eval': {'desc': None, 'value': 100}, 'model_n_rollout_steps': {'desc': None, 'value': 10}, 'model_crop_rand_subseq': {'desc': None, 'value': True}, 'general_top_comp_metric': {'desc': None, 'value': 'mse'}, 'model_n_processing_layers': {'desc': None, 'value': 5}, 'data_dataset_spec_env_name': {'desc': None, 'value': 'kitchen-mixed-v0'}, 'general_epoch_cycles_train': {'desc': None, 'value': 50}, 'data_dataset_spec_n_actions': {'desc': None, 'value': 9}, 'data_dataset_spec_state_dim': {'desc': None, 'value': 60}, 'data_dataset_spec_subseq_len': {'desc': None, 'value': 11}, 'data_dataset_spec_max_seq_len': {'desc': None, 'value': 280}, 'data_dataset_spec_crop_rand_subseq': {'desc': None, 'value': True}})
+2022-11-22 19:44:15,515 INFO    SenderThread:30522 [dir_watcher.py:__init__():216] watching files in: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files
+2022-11-22 19:44:15,515 INFO    SenderThread:30522 [sender.py:_start_run_threads():928] run started: hierarchical_cl with start time 1668988615.899078
+2022-11-22 19:44:15,515 DEBUG   SenderThread:30522 [sender.py:send():303] send: summary
+2022-11-22 19:44:15,516 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-22 19:44:15,518 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: check_version
+2022-11-22 19:44:15,518 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: check_version
+2022-11-22 19:44:15,619 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: run_start
+2022-11-22 19:44:15,619 DEBUG   HandlerThread:30522 [system_info.py:__init__():31] System info init
+2022-11-22 19:44:15,619 DEBUG   HandlerThread:30522 [system_info.py:__init__():46] System info init done
+2022-11-22 19:44:15,619 INFO    HandlerThread:30522 [system_monitor.py:start():150] Starting system monitor
+2022-11-22 19:44:15,620 INFO    SystemMonitor:30522 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-11-22 19:44:15,620 INFO    SystemMonitor:30522 [interfaces.py:start():168] Started cpu
+2022-11-22 19:44:15,621 INFO    SystemMonitor:30522 [interfaces.py:start():168] Started disk
+2022-11-22 19:44:15,622 INFO    SystemMonitor:30522 [interfaces.py:start():168] Started memory
+2022-11-22 19:44:15,623 INFO    SystemMonitor:30522 [interfaces.py:start():168] Started network
+2022-11-22 19:44:15,627 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:44:15,627 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:44:15,791 DEBUG   SenderThread:30522 [sender.py:send():303] send: telemetry
+2022-11-22 19:44:16,517 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json
+2022-11-22 19:44:16,518 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:44:18,519 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:44:22,521 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:44:22,663 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,663 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'eval/results/metric/mse/top100_mean': 0.13567701508873142, '_timestamp': 1669142662.6625385}.
+2022-11-22 19:44:22,663 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,664 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'eval/results/verbose/mse/top100_std': 0.07213598766736566, '_timestamp': 1669142662.6628673}.
+2022-11-22 19:44:22,664 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,664 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'eval/results/verbose/mse/all100_mean': 0.1577023666916648, '_timestamp': 1669142662.6629753}.
+2022-11-22 19:44:22,664 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'eval/results/verbose/mse/all100_std': 0.010250857084475155, '_timestamp': 1669142662.6631615}.
+2022-11-22 19:44:22,665 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'val/rec_mse_loss': 0.9975016117095947, '_timestamp': 1669142662.6636364}.
+2022-11-22 19:44:22,665 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'val/kl_loss_loss': 0.016508890315890312, '_timestamp': 1669142662.6638005}.
+2022-11-22 19:44:22,665 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:22,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479516. Dropping entry: {'val/q_hat_loss_loss': 14.663378715515137, '_timestamp': 1669142662.6639094}.
+2022-11-22 19:44:23,062 DEBUG   SenderThread:30522 [sender.py:send():303] send: files
+2022-11-22 19:44:23,062 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png with policy now
+2022-11-22 19:44:23,065 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,066 DEBUG   SenderThread:30522 [sender.py:send():303] send: history
+2022-11-22 19:44:23,066 DEBUG   SenderThread:30522 [sender.py:send():303] send: summary
+2022-11-22 19:44:23,068 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,068 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479517. Dropping entry: {'val/total_loss': 15.660888671875, '_timestamp': 1669142663.063907}.
+2022-11-22 19:44:23,068 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,068 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479517. Dropping entry: {'val/beta': 0.0005, '_timestamp': 1669142663.0640945}.
+2022-11-22 19:44:23,069 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-22 19:44:23,521 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json
+2022-11-22 19:44:23,521 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png
+2022-11-22 19:44:23,521 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images
+2022-11-22 19:44:23,522 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/val
+2022-11-22 19:44:23,522 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media
+2022-11-22 19:44:23,648 INFO    Thread-16 :30522 [upload_job.py:push():143] Uploaded file /tmp/tmpn0c5x3jvwandb/28258qf2-media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png
+2022-11-22 19:44:23,799 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,799 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479517. Dropping entry: {'train/rec_mse_loss': 1.550823450088501, '_timestamp': 1669142663.7987614}.
+2022-11-22 19:44:23,800 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,800 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479517. Dropping entry: {'train/kl_loss_loss': 0.014781663194298744, '_timestamp': 1669142663.7990427}.
+2022-11-22 19:44:23,800 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,800 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479517. Dropping entry: {'train/q_hat_loss_loss': 450.0577392578125, '_timestamp': 1669142663.7991402}.
+2022-11-22 19:44:23,903 DEBUG   SenderThread:30522 [sender.py:send():303] send: files
+2022-11-22 19:44:23,903 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png with policy now
+2022-11-22 19:44:23,907 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,908 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,908 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479518. Dropping entry: {'train/total_loss': 451.60858154296875, '_timestamp': 1669142663.9059076}.
+2022-11-22 19:44:23,908 DEBUG   SenderThread:30522 [sender.py:send():303] send: history
+2022-11-22 19:44:23,909 DEBUG   SenderThread:30522 [sender.py:send():303] send: summary
+2022-11-22 19:44:23,909 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,909 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479518. Dropping entry: {'train/gradients/mean_norm': 5.780511855846271e-05, '_timestamp': 1669142663.9074237}.
+2022-11-22 19:44:23,909 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,909 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479518. Dropping entry: {'train/gradients/max_norm': 0.0005485074943862855, '_timestamp': 1669142663.9076245}.
+2022-11-22 19:44:23,909 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:44:23,909 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 0 < 479518. Dropping entry: {'train/beta': 0.0005, '_timestamp': 1669142663.9077332}.
+2022-11-22 19:44:23,911 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-22 19:44:24,205 INFO    Thread-17 :30522 [upload_job.py:push():143] Uploaded file /tmp/tmpn0c5x3jvwandb/1yphljmv-media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png
+2022-11-22 19:44:24,458 INFO    Thread-18 :30522 [upload_job.py:push():143] Uploaded file /tmp/tmpn0c5x3jvwandb/1i404rp8-media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png
+2022-11-22 19:44:24,522 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json
+2022-11-22 19:44:24,522 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:44:24,523 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png
+2022-11-22 19:44:24,523 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images
+2022-11-22 19:44:24,523 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_created():275] file/dir created: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/train
+2022-11-22 19:44:25,109 INFO    Thread-19 :30522 [upload_job.py:push():143] Uploaded file /tmp/tmpn0c5x3jvwandb/20eydmje-media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png
+2022-11-22 19:44:26,525 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:44:31,355 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:44:31,355 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:44:46,532 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:44:46,533 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:44:46,550 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/config.yaml
+2022-11-22 19:45:01,703 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:45:01,703 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:45:15,624 DEBUG   SystemMonitor:30522 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-11-22 19:45:15,625 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:45:16,868 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:45:16,869 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:45:32,032 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:45:32,032 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:45:45,626 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:45:47,203 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:45:47,203 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:46:02,372 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:46:02,372 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:46:15,627 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:46:16,487 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,488 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/rec_mse_loss': 0.934627890586853, '_timestamp': 1669142776.486935}.
+2022-11-22 19:46:16,488 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,488 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/kl_loss_loss': 2.525587558746338, '_timestamp': 1669142776.4872184}.
+2022-11-22 19:46:16,488 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,488 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/q_hat_loss_loss': 0.24146518111228943, '_timestamp': 1669142776.4873116}.
+2022-11-22 19:46:16,488 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,488 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/total_loss': 1.1773558855056763, '_timestamp': 1669142776.4873924}.
+2022-11-22 19:46:16,489 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,489 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/gradients/mean_norm': 2.078246831893921, '_timestamp': 1669142776.4882705}.
+2022-11-22 19:46:16,489 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,489 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/gradients/max_norm': 30.65464210510254, '_timestamp': 1669142776.488417}.
+2022-11-22 19:46:16,489 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:46:16,490 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 500 < 479518. Dropping entry: {'train/beta': 0.0005, '_timestamp': 1669142776.488517}.
+2022-11-22 19:46:17,540 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:46:17,540 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:46:18,648 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:46:32,708 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:46:32,708 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:46:45,628 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:46:47,882 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:46:47,882 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:47:03,038 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:47:03,039 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:47:15,628 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:47:18,210 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:47:18,210 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:47:33,373 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:47:33,374 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:47:45,629 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:47:48,538 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:47:48,539 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:48:03,710 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:48:03,710 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:48:10,665 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/rec_mse_loss': 0.9286836981773376, '_timestamp': 1669142890.6644037}.
+2022-11-22 19:48:10,665 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,665 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/kl_loss_loss': 2.7920544147491455, '_timestamp': 1669142890.6646917}.
+2022-11-22 19:48:10,666 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,666 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/q_hat_loss_loss': -2.489236354827881, '_timestamp': 1669142890.6647844}.
+2022-11-22 19:48:10,666 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,666 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/total_loss': -1.5591566562652588, '_timestamp': 1669142890.6649191}.
+2022-11-22 19:48:10,667 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,667 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/gradients/mean_norm': 1.7232078313827515, '_timestamp': 1669142890.665926}.
+2022-11-22 19:48:10,667 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,667 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/gradients/max_norm': 31.80223846435547, '_timestamp': 1669142890.6660576}.
+2022-11-22 19:48:10,667 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: partial_history
+2022-11-22 19:48:10,668 WARNING HandlerThread:30522 [handler.py:handle_request_partial_history():528] Step 1000 < 479518. Dropping entry: {'train/beta': 0.0005, '_timestamp': 1669142890.666152}.
+2022-11-22 19:48:12,771 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:48:15,630 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:48:18,875 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:48:18,875 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:48:34,044 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: stop_status
+2022-11-22 19:48:34,044 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: stop_status
+2022-11-22 19:48:45,632 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:48:46,941 DEBUG   SenderThread:30522 [sender.py:send():303] send: exit
+2022-11-22 19:48:46,941 INFO    SenderThread:30522 [sender.py:send_exit():442] handling exit code: 255
+2022-11-22 19:48:46,941 INFO    SenderThread:30522 [sender.py:send_exit():444] handling runtime: 154304
+2022-11-22 19:48:46,942 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-22 19:48:46,942 INFO    SenderThread:30522 [sender.py:send_exit():450] send defer
+2022-11-22 19:48:46,942 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,942 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 0
+2022-11-22 19:48:46,942 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,942 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-11-22 19:48:46,942 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 1
+2022-11-22 19:48:46,943 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,943 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 1
+2022-11-22 19:48:46,943 INFO    HandlerThread:30522 [system_monitor.py:finish():160] Stopping system monitor
+2022-11-22 19:48:46,943 DEBUG   SystemMonitor:30522 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-11-22 19:48:46,943 DEBUG   SystemMonitor:30522 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-11-22 19:48:46,944 INFO    HandlerThread:30522 [interfaces.py:finish():173] Joined cpu
+2022-11-22 19:48:46,944 INFO    HandlerThread:30522 [interfaces.py:finish():173] Joined disk
+2022-11-22 19:48:46,944 INFO    HandlerThread:30522 [interfaces.py:finish():173] Joined memory
+2022-11-22 19:48:46,944 INFO    HandlerThread:30522 [interfaces.py:finish():173] Joined network
+2022-11-22 19:48:46,944 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,944 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-11-22 19:48:46,944 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 2
+2022-11-22 19:48:46,945 DEBUG   SenderThread:30522 [sender.py:send():303] send: stats
+2022-11-22 19:48:46,945 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,945 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 2
+2022-11-22 19:48:46,945 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,945 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-11-22 19:48:46,945 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 3
+2022-11-22 19:48:46,945 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,945 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 3
+2022-11-22 19:48:46,946 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,946 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-11-22 19:48:46,946 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 4
+2022-11-22 19:48:46,946 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,946 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 4
+2022-11-22 19:48:46,946 DEBUG   SenderThread:30522 [sender.py:send():303] send: summary
+2022-11-22 19:48:46,947 INFO    SenderThread:30522 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-11-22 19:48:46,947 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,947 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-11-22 19:48:46,947 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 5
+2022-11-22 19:48:46,947 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,947 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 5
+2022-11-22 19:48:46,947 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,947 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-11-22 19:48:46,947 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 6
+2022-11-22 19:48:46,947 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:46,947 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 6
+2022-11-22 19:48:46,948 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:46,948 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-11-22 19:48:47,812 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json
+2022-11-22 19:48:47,940 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-22 19:48:48,817 INFO    Thread-13 :30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:48:50,076 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 7
+2022-11-22 19:48:50,076 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: poll_exit
+2022-11-22 19:48:50,077 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:50,077 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 7
+2022-11-22 19:48:50,077 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:50,077 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-11-22 19:48:50,077 INFO    SenderThread:30522 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-11-22 19:48:50,820 INFO    SenderThread:30522 [dir_watcher.py:_on_file_modified():292] file/dir modified: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:48:50,820 INFO    SenderThread:30522 [dir_watcher.py:finish():392] scan: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files
+2022-11-22 19:48:50,821 INFO    SenderThread:30522 [dir_watcher.py:finish():406] scan save: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log output.log
+2022-11-22 19:48:50,821 INFO    SenderThread:30522 [dir_watcher.py:finish():406] scan save: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/config.yaml config.yaml
+2022-11-22 19:48:50,823 INFO    SenderThread:30522 [dir_watcher.py:finish():406] scan save: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json wandb-summary.json
+2022-11-22 19:48:50,827 INFO    SenderThread:30522 [dir_watcher.py:finish():406] scan save: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png media/images/val/q_hat_loss_breakdown_479516_0f6c47aab202840e2b8b.png
+2022-11-22 19:48:50,827 INFO    SenderThread:30522 [dir_watcher.py:finish():406] scan save: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png media/images/train/q_hat_loss_breakdown_479517_ff116140222e97c1ddad.png
+2022-11-22 19:48:50,827 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 8
+2022-11-22 19:48:50,828 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:50,828 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 8
+2022-11-22 19:48:50,828 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:50,828 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-11-22 19:48:50,828 INFO    SenderThread:30522 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-22 19:48:51,713 INFO    Thread-20 :30522 [upload_job.py:push():143] Uploaded file ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/output.log
+2022-11-22 19:48:51,718 INFO    Thread-21 :30522 [upload_job.py:push():143] Uploaded file ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/config.yaml
+2022-11-22 19:48:51,721 INFO    Thread-22 :30522 [upload_job.py:push():143] Uploaded file ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/files/wandb-summary.json
+2022-11-22 19:48:51,922 INFO    Thread-12 :30522 [sender.py:transition_state():463] send defer: 9
+2022-11-22 19:48:51,923 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:51,923 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 9
+2022-11-22 19:48:51,923 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:51,923 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-11-22 19:48:51,923 INFO    SenderThread:30522 [file_pusher.py:join():173] waiting for file pusher
+2022-11-22 19:48:51,923 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 10
+2022-11-22 19:48:51,923 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:51,923 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 10
+2022-11-22 19:48:51,924 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:51,924 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-11-22 19:48:52,596 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 11
+2022-11-22 19:48:52,597 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:52,597 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 11
+2022-11-22 19:48:52,597 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:52,597 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-11-22 19:48:52,597 INFO    SenderThread:30522 [sender.py:transition_state():463] send defer: 12
+2022-11-22 19:48:52,598 DEBUG   SenderThread:30522 [sender.py:send():303] send: final
+2022-11-22 19:48:52,598 DEBUG   SenderThread:30522 [sender.py:send():303] send: footer
+2022-11-22 19:48:52,598 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: defer
+2022-11-22 19:48:52,598 INFO    HandlerThread:30522 [handler.py:handle_request_defer():162] handle defer: 12
+2022-11-22 19:48:52,598 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: defer
+2022-11-22 19:48:52,598 INFO    SenderThread:30522 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-11-22 19:48:52,599 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: poll_exit
+2022-11-22 19:48:52,599 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: poll_exit
+2022-11-22 19:48:52,600 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: server_info
+2022-11-22 19:48:52,600 DEBUG   SenderThread:30522 [sender.py:send_request():317] send_request: server_info
+2022-11-22 19:48:52,601 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: get_summary
+2022-11-22 19:48:52,602 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: sampled_history
+2022-11-22 19:48:52,928 INFO    MainThread:30522 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-11-22 19:48:52,928 INFO    MainThread:30522 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-11-22 19:48:52,929 INFO    MainThread:30522 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-11-22 19:48:52,929 DEBUG   HandlerThread:30522 [handler.py:handle_request():139] handle_request: shutdown
+2022-11-22 19:48:52,929 INFO    HandlerThread:30522 [handler.py:finish():814] shutting down handler
+2022-11-22 19:48:53,599 INFO    WriterThread:30522 [datastore.py:close():279] close: ./experiments/skill_prior_learning/kitchen/hierarchical_cl/wandb/run-20221122_194414-hierarchical_cl/run-hierarchical_cl.wandb
+2022-11-22 19:48:53,930 INFO    SenderThread:30522 [sender.py:finish():1331] shutting down sender
+2022-11-22 19:48:53,930 INFO    SenderThread:30522 [file_pusher.py:finish():168] shutting down file pusher
+2022-11-22 19:48:53,930 INFO    SenderThread:30522 [file_pusher.py:join():173] waiting for file pusher
+2022-11-22 19:48:53,932 INFO    MainThread:30522 [internal.py:handle_exit():78] Internal process exited

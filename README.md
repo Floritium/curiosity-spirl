@@ -26,8 +26,11 @@ This is the official PyTorch implementation of the paper "**Accelerating Reinfor
 
 ## Requirements
 
-- python 3.7+
-- mujoco 2.0 (for RL experiments)
+I have updated some of the dependencies since for example mujoco 2.0 is a legacy version as of now.
+
+- python 3.8
+- mujoco 2.1 (use github releases)
+	- installation has to be put in a <path/to/.mujoco>/mujoco210/bin structure otherwise mjrl 		  won't work
 - Ubuntu 18.04
 
 ## Installation Instructions
@@ -40,6 +43,7 @@ virtualenv -p $(which python3) ./venv
 source ./venv/bin/activate
 
 # Install dependencies and package
+conda install -y mpi4py
 pip3 install -r requirements.txt
 pip3 install -e .
 ```
@@ -54,6 +58,32 @@ export DATA_DIR=./data
 
 Finally, install **our fork** of the [D4RL benchmark](https://github.com/kpertsch/d4rl) repository by following its installation instructions.
 It will provide both, the kitchen environment as well as the training data for the skill prior model in kitchen and maze environment.
+
+This is a bit tricky, since the way described above does not work for me. Instead I use this:
+
+```
+git clone https://github.com/kpertsch/d4rl.git
+```
+Now remove line 14 from the setup.py found within, since we will be installing mjrl seperatly from https://github.com/aravindr93/mjrl/tree/master/setup#installation.
+```
+sudo apt-get install libgl1-mesa-dev libgl1-mesa-glx libglew-dev libosmesa6-dev build-essential libglfw3
+```
+Update bashrc:
+```
+export LD_LIBRARY_PATH="<path/to/.mujoco>/mujoco200/bin:$LD_LIBRARY_PATH"
+export MUJOCO_PY_FORCE_CPU=True
+alias MJPL='LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/nvidia-384/libGL.so'
+```
+Then install mjrl:
+```
+cd <path/to/mjrl>
+pip install -e .
+```
+Now install d4rl:
+```
+cd <path/to/d4rl>
+pip install -e .
+```
 
 ## Example Commands
 All results will be written to [WandB](https://www.wandb.com/). Before running any of the commands below, 

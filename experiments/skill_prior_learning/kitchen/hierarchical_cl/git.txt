@@ -1,0 +1,76 @@
+e74ad23d2e9696369ec3d998f2920be4cddf9015
+diff --git a/requirements.txt b/requirements.txt
+index dbd6411..8a35a43 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,20 +1,20 @@
+-# core
+-numpy
+-matplotlib
+-pillow
+-h5py==2.10.0
+-scikit-image
+-funcsigs
+-opencv-python
+-moviepy
+-torch==1.9.0
+-torchvision==0.10.0
+-tensorboard==2.1.1
+-tensorboardX==2.0
+-gym==0.15.4
+-pandas
+-
+-# RL
+-wandb
+-mpi4py
+-mujoco_py==2.0.2.9
++funcsigs==1.0.2
++glfw==2.5.5
++gym==0.23.0
++h5py==3.7.0
++hid==1.0.5
++imageio==2.22.1
++matplotlib==3.6.1
++mujoco_py==2.1.2.14
++numpy==1.23.3
++opencv_python==4.6.0.66
++Pillow==9.3.0
++pybullet==3.2.5
++pygame==2.1.2
++scikit_image==0.19.3
++tensorboardX==2.5.1
++torch==1.12.1
++torchvision==0.13.1
++tqdm==4.64.1
++wandb==0.13.5
++patchelf
+diff --git a/spirl/rl/train.py b/spirl/rl/train.py
+index 225a09e..4df8ee9 100644
+--- a/spirl/rl/train.py
++++ b/spirl/rl/train.py
+@@ -15,8 +15,8 @@ from spirl.rl.utils.rollout_utils import RolloutSaver
+ from spirl.rl.components.sampler import Sampler
+ from spirl.rl.components.replay_buffer import RolloutStorage
+ 
+-WANDB_PROJECT_NAME = 'your_project_name'
+-WANDB_ENTITY_NAME = 'your_entity_name'
++WANDB_PROJECT_NAME = 'Hauke Bachelor Thesis'
++WANDB_ENTITY_NAME = 'haukebue'
+ 
+ 
+ class RLTrainer:
+diff --git a/spirl/train.py b/spirl/train.py
+index 104ca88..e0e1ac5 100644
+--- a/spirl/train.py
++++ b/spirl/train.py
+@@ -23,8 +23,8 @@ from spirl.components.trainer_base import BaseTrainer
+ from spirl.utils.wandb import WandBLogger
+ from spirl.components.params import get_args
+ 
+-WANDB_PROJECT_NAME = 'your_project_name'
+-WANDB_ENTITY_NAME = 'your_entity_name'
++WANDB_PROJECT_NAME = 'Hauke Bachelor Thesis'
++WANDB_ENTITY_NAME = 'haukebue'
+ 
+ 
+ class ModelTrainer(BaseTrainer):
