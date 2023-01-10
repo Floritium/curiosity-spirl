@@ -1,14 +1,17 @@
 import numpy as np
 import d4rl
 
+import modules.subnetworks
 from spirl.rl.components.environment import GymEnv
 from spirl.utils.general_utils import ParamDict, AttrDict
+from spirl.configs.hrl.maze.base_conf import ll_model_params
 
 
 class MazeEnv(GymEnv):
     """Shallow wrapper around gym env for maze envs."""
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        model = modules.subnetworks.Predictor(input_size = 4 + ll_model_params.nz_vae, output_size = 4)
 
     def _default_hparams(self):
         default_dict = ParamDict({
@@ -26,6 +29,9 @@ class MazeEnv(GymEnv):
 
     def step(self, *args, **kwargs):
         obs, rew, done, info = super().step(*args, **kwargs)
+
+        model
+
         return obs, np.float64(rew), done, info     # casting reward to float64 is important for getting shape later
 
 
