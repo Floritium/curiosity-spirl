@@ -17,11 +17,6 @@ class Curiosity_Module:
         self.optimizer = torch.optim.SGD(self.model.parameters(), lr=0.01)
 
         self.loss_log = []
-                            
-    #def run_batch(self, experience_batch):
-        #exp_batch = experience_batch.hl_batch
-        #for i in range(exp_batch.size):
-            #exp_batch[i][]
 
     def experience_forward(self, experience):
         input = torch.cat((experience.observation, experience.action))
@@ -42,3 +37,5 @@ class Curiosity_Module:
             self.model.zero_grad()
             self.loss_log[i].backward()
             self.optimizer.step
+        self.loss_log = []
+        
