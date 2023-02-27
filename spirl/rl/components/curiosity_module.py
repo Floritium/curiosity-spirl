@@ -33,9 +33,8 @@ class Curiosity_Module:
         return experience
     
     def train_worldModel(self):
-        for i in range(self.loss_log.size()):
+        for i in range(len(self.loss_log)):
             self.model.zero_grad()
             self.loss_log[i].backward()
             self.optimizer.step
         self.loss_log = []
-        
