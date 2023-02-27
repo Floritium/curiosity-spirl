@@ -144,25 +144,6 @@ class HierarchicalSampler(Sampler):
         self.last_hl_obs, self.last_hl_action = None, None  # stores observation when last hl action was taken
         self.reward_since_last_hl = 0  # accumulates the reward since the last HL step for HL transition
 
-        self.pred_hparams = self.pred_hparams()
-        self.pred_hparams.builder = LayerBuilderParams(self.pred_hparams.use_convs)
-
-        self.model = spirl.modules.subnetworks.Predictor(self.pred_hparams, input_size = 60 + 10, output_size = 4) # input size is state dim for kitchen and skill dim for maze
-
-
-    def pred_hparams(self):
-        # put new parameters in here:
-        return ParamDict({
-            'use_convs': False,
-            'device': None,
-            'state_dim': 1,             # dimensionality of the state space
-            'action_dim': 1,            # dimensionality of the action space
-            'nz_mid': 38,              # number of dimensions for internal feature spaces
-            'n_processing_layers': 3,   # number of layers in MLPs
-            'output_type': 'gauss',     # distribution type for learned prior, ['gauss', 'gmm', 'flow']
-            'n_gmm_prior_components': 5,    # number of Gaussian components for GMM learned prior
-    })
-
     def sample_batch(self, batch_size, is_train=True, global_step=None, store_ll=True):
         """Samples the required number of high-level transitions. Number of LL transitions can be higher."""
         hl_experience_batch, ll_experience_batch = [], []
@@ -175,7 +156,7 @@ class HierarchicalSampler(Sampler):
                         # perform one rollout step
                         agent_output = self.sample_action(self._obs)
                         agent_output = self._postprocess_agent_output(agent_output)
-                        obs, external_reward, done, info = self._env.step(agent_output.action)
+                        obs, reward, done, info = self._env.step(agent_output.action)
                         obs = self._postprocess_obs(obs)
 
                         # update last step's 'observation_next' with HL action
@@ -187,7 +168,7 @@ class HierarchicalSampler(Sampler):
                             # store current step in ll_experience_batch
                             ll_experience_batch.append(AttrDict(
                                 observation=self._agent.make_ll_obs(self._obs, agent_output.hl_action),
-                                reward=external_reward,
+                                reward=reward,
                                 done=done,
                                 action=agent_output.action,
                                 observation_next=obs,       # this will get updated in the next step
@@ -203,14 +184,6 @@ class HierarchicalSampler(Sampler):
                                     action=self.last_hl_action,
                                     observation_next=obs,
                                 ))
-                                if self._episode_step > 0:       
-                                    model_input = torch.from_numpy(np.append(self.last_hl_action, self.last_hl_obs))
-
-                                    model_output = self.model.forward(model_input)
-
-                                    internal_reward = obs - model_output
-                                    total_reward = internal_reward + external_reward
-
                                 hl_step += 1
                                 if done:
                                     hl_experience_batch[-1].reward += total_reward  # add terminal reward
@@ -225,7 +198,7 @@ class HierarchicalSampler(Sampler):
                         # this might be wrong
                         self._obs = obs
                         env_steps += 1; self._episode_step += 1; self._episode_reward += total_reward
-                        self.reward_since_last_hl += external_reward
+                        self.reward_since_last_hl += reward
 
                         # reset if episode ends
                         if done or self._episode_step >= self._max_episode_len:
