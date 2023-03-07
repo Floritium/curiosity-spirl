@@ -7,6 +7,8 @@ from spirl.utils.general_utils import ParamDict, map_dict, AttrDict
 from spirl.utils.pytorch_utils import ten2ar, avg_grad_norm, TensorModule, check_shape, map2torch, map2np
 from spirl.rl.utils.mpi import sync_networks
 
+from spirl.rl.components.curiosity_module import Curiosity_Module
+
 
 class ACAgent(BaseAgent):
     """Implements actor-critic agent. (does not implement update function, this should be handled by RL algo agent)"""
@@ -92,6 +94,8 @@ class SACAgent(ACAgent):
 
         self._update_steps = 0                # counts the number of alpha updates for optional variable schedules
 
+        self.curiosity_model = Curiosity_Module()
+
     def _default_hparams(self):
         default_dict = ParamDict({
             'critic': None,           # critic class
@@ -118,6 +122,8 @@ class SACAgent(ACAgent):
             experience_batch = self._normalize_batch(experience_batch)
             experience_batch = map2torch(experience_batch, self._hp.device)
             experience_batch = self._preprocess_experience(experience_batch)
+
+            experience_batch = self.curiosity_model.experience_forward(experience_batch)
 
             policy_output = self._run_policy(experience_batch.observation)
 
@@ -178,6 +184,7 @@ class SACAgent(ACAgent):
 
             self._update_steps += 1
 
+        self.curiosity_model.train_worldModel()
         return info
 
     def add_experience(self, experience_batch):
