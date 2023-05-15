@@ -1,6 +1,10 @@
 import matplotlib; matplotlib.use('Agg')
 import torch
 import os
+
+os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
 import time
 from shutil import copy
 import datetime
@@ -211,9 +215,13 @@ class ModelTrainer(BaseTrainer):
 
     def setup_device(self):
         self.use_cuda = torch.cuda.is_available() and not self.args.debug
-        self.device = torch.device('cuda') if self.use_cuda else torch.device('cpu')
-        if self.args.gpu != -1:
-            os.environ["CUDA_VISIBLE_DEVICES"] = str(self.args.gpu)
+        os.environ['CUDA_DEVICE_ORDER']= 'PCI_BUS_ID'
+        os.environ['CUDA_VISIBLE_DEVICES']= '0'
+        cuda_id=torch.cuda.current_device()
+        print(torch.cuda.get_device_name(cuda_id))
+        self.device = torch.device('cuda', 0) if self.use_cuda else torch.device('cpu')
+        #if self.args.gpu != -1:
+            #os.environ["CUDA_VISIBLE_DEVICES"] = str(self.args.gpu)
 
     def get_config(self):
         conf = AttrDict()
@@ -289,9 +297,9 @@ class ModelTrainer(BaseTrainer):
         else:
             logger = None
         model = params.model_class(self.conf.model, logger)
-        if torch.cuda.device_count() > 1:
-            raise ValueError("Detected {} devices. Currently only single-GPU training is supported!".format(torch.cuda.device_count()),
-                             "Set CUDA_VISIBLE_DEVICES=<desired_gpu_id>.")
+        #if torch.cuda.device_count() > 1:
+            #raise ValueError("Detected {} devices. Currently only single-GPU training is supported!".format(torch.cuda.device_count()),
+                             #"Set CUDA_VISIBLE_DEVICES=<desired_gpu_id>.")
             #print("\nUsing {} GPUs!\n".format(torch.cuda.device_count()))
             #model = DataParallelWrapper(model)
         model = model.to(self.device)

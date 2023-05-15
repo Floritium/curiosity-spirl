@@ -2,6 +2,7 @@ import wandb
 import inspect
 import numpy as np
 import torch
+from datetime import datetime as dt
 
 from spirl.utils.general_utils import flatten_dict, prefix_dict
 from spirl.utils.vis_utils import plot_graph
@@ -25,7 +26,7 @@ class WandBLogger:
         filtered_config = {k: v for k, v in flat_config.items() if (k not in exclude and not inspect.isclass(v))}
         print("INIT WANDB")
         wandb.init(
-            resume=exp_name,
+            resume=exp_name + ' maze - ' + dt.now().strftime('%Y-%m-%d_%H-%M-%S'),
             project=project_name,
             config=filtered_config,
             dir=path,

@@ -113,6 +113,20 @@ class UniformReplayBuffer(ReplayBuffer):
                 sampled_transitions[key] = self._replay_buffer[key][idxs]
         return sampled_transitions
 
+"""    def append(self, experience_batch):
+        print('I was here \n')
+
+        cutoff_size = 6144
+
+        filtered_experience_batch = copy.deepcopy(experience_batch)
+        if self._hp.discard_part == 'front':
+            filtered_experience_batch.observation = [o[cutoff_size:] for o in filtered_experience_batch.observation]
+            filtered_experience_batch.observation_next = [o[cutoff_size:] for o in filtered_experience_batch.observation_next]
+        elif self._hp.discard_part == 'back':
+            filtered_experience_batch.observation = [o[:-cutoff_size] for o in filtered_experience_batch.observation]
+            filtered_experience_batch.observation_next = [o[:-cutoff_size] for o in filtered_experience_batch.observation_next]
+        return super().append(filtered_experience_batch)
+"""
 
 class FilteredReplayBuffer(ReplayBuffer):
     """Has option to *not* store certain attributes in replay (eg to save memory by not storing images."""
@@ -135,12 +149,13 @@ class SplitObsReplayBuffer(ReplayBuffer):
     """Splits off unused part of observation before storing (eg to save memory by not storing images)."""
     def _default_hparams(self):
         default_dict = ParamDict({
-            'unused_obs_size': None,    # dimensionality of split off observation part
+            'unused_obs_size': 6144,    # dimensionality of split off observation part
             'discard_part': 'back',     # which part of observation to discard ['front', 'back']
         })
         return super()._default_hparams().overwrite(default_dict)
 
     def append(self, experience_batch):
+        print('I was here \n')
         filtered_experience_batch = copy.deepcopy(experience_batch)
         if self._hp.discard_part == 'front':
             filtered_experience_batch.observation = [o[self._hp.unused_obs_size:] for o in filtered_experience_batch.observation]

@@ -123,8 +123,13 @@ class SACAgent(ACAgent):
             experience_batch = map2torch(experience_batch, self._hp.device)
             experience_batch = self._preprocess_experience(experience_batch)
 
+            extrinsic_reward = experience_batch.reward
+            #print("e_reward: " + str(extrinsic_reward))
             experience_batch = self.curiosity_model.experience_forward(experience_batch)
 
+            #print(experience_batch)
+            intrinsic_reward = experience_batch.reward - extrinsic_reward
+            #print("I_reward: " + str(intrinsic_reward))
             policy_output = self._run_policy(experience_batch.observation)
 
             # update alpha
@@ -178,6 +183,8 @@ class SACAgent(ACAgent):
                 q_target=q_target.mean(),
                 q_1=qs[0].mean(),
                 q_2=qs[1].mean(),
+                intrinsic_reward = intrinsic_reward,
+                extrinsic_reward = extrinsic_reward,
             ))
             info.update(self._aux_info(experience_batch, policy_output))
             info = map_dict(ten2ar, info)

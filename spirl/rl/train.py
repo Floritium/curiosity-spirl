@@ -1,5 +1,9 @@
 import torch
 import os
+
+os.environ['CUDA_DEVICE_ORDER']='PCI_BUS_ID'
+os.environ['CUDA_VISIBLE_DEVICES']='0'
+
 import imp
 import json
 from tqdm import tqdm
@@ -273,9 +277,11 @@ class RLTrainer:
 
     def setup_device(self):
         self.use_cuda = torch.cuda.is_available() and not self.args.debug
-        self.device = torch.device('cuda') if self.use_cuda else torch.device('cpu')
-        if self.args.gpu != -1:
-            os.environ["CUDA_VISIBLE_DEVICES"] = str(self.args.gpu)
+        os.environ['CUDA_DEVICE_ORDER']='PCI_BUS_ID'
+        os.environ['CUDA_VISIBLE_DEVICES']='0'
+        self.device = torch.device('cuda', 0) if self.use_cuda else torch.device('cpu')
+        #if self.args.gpu != -1:
+            #os.environ["CUDA_VISIBLE_DEVICES"] = str(self.args.gpu)
 
     def resume(self, ckpt, path=None):
         path = os.path.join(self._hp.exp_path, 'weights') if path is None else os.path.join(path, 'weights')

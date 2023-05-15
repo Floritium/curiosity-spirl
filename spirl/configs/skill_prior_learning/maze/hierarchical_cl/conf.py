@@ -13,7 +13,7 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 configuration = {
     'model': ImageClSPiRLMdl,
     'logger': SkillSpaceLogger,
-    'data_dir': os.path.join(os.environ['DATA_DIR'], 'maze'),
+    'data_dir':'/data/9buennin/BachelorThesis/Downloads/maze',
     'epoch_cycles_train': 10,
     'evaluator': TopOfNSequenceEvaluator,
     'top_of_n_eval': 100,

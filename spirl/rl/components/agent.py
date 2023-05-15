@@ -72,7 +72,7 @@ class BaseAgent(nn.Module):
     def log_outputs(self, logging_stats, rollout_storage, logger, log_images, step):
         """Visualizes/logs all training outputs."""
         logger.log_scalar_dict(logging_stats, prefix='train' if self._is_train else 'val', step=step)
-
+        log_images=False
         if log_images:
             assert rollout_storage is not None      # need rollout data for image logging
             # log rollout videos with info captions
